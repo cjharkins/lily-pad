@@ -1,0 +1,87 @@
+Object Literal syntax
+
+const ernie = {
+	animal: 'dog',
+	age: 1,
+	breed: 'pug',
+	bark: function() {
+		console.log('Woof!');
+	}
+};
+
+Accessing the objects properties and methods
+
+1. Dot notation
+	
+	ernie.animal;
+	ernie.age;
+	ernie.breed;
+	ernie.bark();
+
+2. Bracket notation
+
+	ernie["animal"];
+	ernie["bark"]();
+
+
+Changing and Adding Properties
+
+	ernie.animal = 'cat';
+	ernie.age = 4;
+	ernie.bark = function() { console.log('meow'); };
+
+
+Classes
+
+Abstracting objects
+
+class Pet {
+	constructor(animal, age, breed){
+		this.animal = animal,
+		this.age = age,
+		this.breed = breed;
+		this.sound = sound;
+	}
+
+	get activity(){
+		const today = new Date();
+		const hour = today.getHours();
+
+		(hour > 8 && hour <= 20) ? 'playing':'sleeping';
+
+	}
+	get owner(){
+		return this._owner;
+	}
+
+	set owner(owner){
+		this._owner = owner;
+		console.log(`setter called: ${owner}`);
+	}
+
+	speak(sound) {
+		console.log(this.sound);
+	}
+}
+
+class Owner {
+	constructor(name, address){
+		this.name = name;
+		this.address = address;
+	}
+	get phone(){
+		return this._phone;
+	}
+	set phone(phone){
+		const phoneNormalized = phone.replace(/[^0-9]/g,"");
+		this._phone = phoneNormalized;
+	}
+}
+
+
+const kitters = new Pet('cat', 2, 'calico');
+const dickface = new Pet('dog',4,'pug');
+console.log(kitters.activity);
+kitters.owner = new Owner('Ashley', '123 Main Street');
+kitters.owner.phone = '(444)444-4444';
+console.log(kitters.owner);

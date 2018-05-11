@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+	head
+		title Flash Cards
+	body
+		header
+			h1 Users
+		section#content
+			table
+				tr
+					th First Name
+					th Last Name
+				each user in users
+					tr
+						td= firstName
+						td= lastName
