@@ -14,6 +14,8 @@ app.set('view engine', 'pug');
 
 app.get('/',(req,res)=>res.render('index'));
 app.get('/skills',(req,res)=>res.render('skills'));
+app.get('/jumbotron',(req,res)=>res.render('jumbotron'));
+// app.get('/scripts',(req,res)=>res.render('scripts'));
 
 app.get('/cards', (req,res)=> {
 	res.locals.hint = '';
