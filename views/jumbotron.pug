@@ -1,11 +1,12 @@
 extends layout
 
 block content
+block content
     .bg-image
     .container
         nav.navbar.navbar-expand-lg.navbar-light.bg-light
             a(href='#').navbar-brand Navbar
-            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+            button.navbar-toggle.collapsed(type="button" data-toggle="dropdown" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
                 span.navbar-toggler-icon
             .collapse.navbar-collapse#navbarSupportedContent
                 ul.navbar-nav.ml-auto
